@@ -8,14 +8,14 @@ namespace ClassTask
 {
     internal class Group : Stundent
     {
-        public  int Id { get; set; } 
-        public  string name { get; set; }
+        public int Id { get; set; }
+        public string name { get; set; }
         public static string[] Students = new string[id];
-        
-        
-       
-        
-       
-        
+
+
+
+
+
+
     }
 }
