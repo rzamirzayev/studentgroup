@@ -54,8 +54,8 @@ namespace ClassTask
             Console.Write("Silmek istediyiniz id qeyd edin:");
             int deleteid = Convert.ToInt32(Console.ReadLine());
             bool idcontrol = false;
-            Group.Students[(deleteid * 2)] = "0";
-            Group.Students[(deleteid * 2) + 1] = "0";
+            Group.Students[(deleteid * 2)] = string.Empty;
+            Group.Students[(deleteid * 2) + 1] = string.Empty;
    
         }
         public void Edit()
