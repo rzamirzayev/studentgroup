@@ -17,10 +17,7 @@ namespace ClassTask
 
             Console.Write("Adinzi daxil edin:");
             s.name = Console.ReadLine();
-            Array.Resize(ref Group.Students, Group.Students.Length + 1);
-            {
-                Group.Students[Group.Students.Length - 1] = s.name;
-            }
+            
 
 
 
@@ -28,7 +25,7 @@ namespace ClassTask
             s.surname = Console.ReadLine();
             Array.Resize(ref Group.Students, Group.Students.Length + 1);
             {
-                Group.Students[Group.Students.Length - 1] = s.surname;
+                Group.Students[Group.Students.Length - 1] = s.name+s.surname;
             }
 
             bool controlname = false;
@@ -36,15 +33,15 @@ namespace ClassTask
             if (s.name.Length >= 3 && s.name.Length < 15)
             {
                 controlname = true;
-                id++;
 
+                id++;
                 if (s.surname.Length >= 3)
                 {
                     controlsurname = true;
                     id++;
 
                 }
-                Console.WriteLine("Idiniz:" + id / 2);
+                Console.WriteLine("Idiniz:" + ((id / 2)-1));
 
             }
 
@@ -53,19 +50,24 @@ namespace ClassTask
         {
             Console.Write("Silmek istediyiniz id qeyd edin:");
             int deleteid = Convert.ToInt32(Console.ReadLine());
-            bool idcontrol = false;
-            Group.Students[(deleteid * 2)] =string.Empty;
-            Group.Students[(deleteid * 2) + 1] = string.Empty;
+            
+            Group.Students[(deleteid)] =string.Empty;
+            
 
         }
         public void Edit()
         {
             Console.WriteLine("Deyismek istediyiniz idini daxil edin:");
             int editid = Convert.ToInt32(Console.ReadLine());
+            string ad;
+            string soyad;
             Console.WriteLine("Deyismek istediyinz adi daxil edin.");
-            Group.Students[editid * 2] = Console.ReadLine();
+            ad= Console.ReadLine(); 
+            
             Console.WriteLine("Deyismek istediyiniz soyadi daxil edin.");
-            Group.Students[(editid * 2) + 1] = Console.ReadLine();
+            soyad= Console.ReadLine();
+            Group.Students[editid] = ad + soyad;
+            
 
 
 
@@ -73,12 +75,16 @@ namespace ClassTask
         }
         public void GetAll()
         {
-            foreach (var item in Group.Students)
+            foreach(var item in Group.Students)
             {
                 Console.WriteLine(item);
+            }
+              
+                    
+                    
+                
             }
         }
 
 
     }
-}
