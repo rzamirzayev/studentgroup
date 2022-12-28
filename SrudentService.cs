@@ -79,12 +79,30 @@ namespace ClassTask
             {
                 Console.WriteLine(item);
             }
+
               
                     
                     
                 
             }
+        public void GetById()
+        {
+            Console.WriteLine("Yoxlamaq istediyinz id daxil edin");
+            int idcontrol = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+
+                Console.WriteLine(Group.Students[idcontrol]);
+
+            }
+            catch
+            {
+                Console.WriteLine("Bu indexli id yoxdur");
+            }
+            
+        }
         }
 
 
     }
+
