@@ -17,9 +17,9 @@ do
     if (secim == "1")
     {
         service.Create();
-        
-        
-        
+
+
+
 
     }
     else if (secim == "2")
@@ -35,15 +35,14 @@ do
     else if (secim == "4")
     {
         service.GetAll();
-        
+
 
     }
     else if (secim == "5")
     {
 
     }
-    else
-        Console.WriteLine("Duzgun secim daxil elemediz");
+    
 
 
 } while (secim != "0");
