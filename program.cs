@@ -40,7 +40,7 @@ do
     }
     else if (secim == "5")
     {
-
+        service.GetById();
     }
     
 
